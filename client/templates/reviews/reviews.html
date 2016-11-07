@@ -1,0 +1,58 @@
+<template name="reviews">
+    <div class="container">
+        <div class="row recipe-row">
+            <div class="col-md-2">
+                {{#with FS.GetFile "recipesImages" image}}
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+                <button onclick="goBack()">Go Back</button> <br> <img class="img-responsive margin-top" src="{{url}}"> 
+                {{/with}}
+
+            </div>
+            <div class="col-md-10 mb">
+                <h3>{{name}}</h3>
+                <p><span class="average-rating">Average Rating:</span> <img class="stars" src="/img/star{{averageRating}}.png"> ({{countReviews}} reviews)</p>
+
+                {{shortText description 100}}
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        {{#if currentUser}}
+                            <a href="/add_review/{{_id}}" class="btn btn-success">Leave a Review</a>
+                        {{else}}
+                            <a href="/sign-in" class="btn btn-success">Log In to add a Review</a>
+
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h4>Reviews & Ratings</h4>
+
+        {{#each showReviews}}
+            {{#if countReviews }}
+                <div class="row">
+                    <div class="col-md-10 review">
+                        <p><img class="stars" src="/img/star{{rating}}.png">  <small class="review-author"> By {{author}} </small></p>
+                        {{review}}
+                    </div>
+
+                </div>
+                <br>
+
+            {{/if}}
+            {{else}}
+            <p class="no-reviews">There are no reviews for this Recipe. Be the first one to review this Recipe.</p>
+
+        {{/each}}
+
+    </div>
+
+</template>

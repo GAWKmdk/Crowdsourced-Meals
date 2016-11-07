@@ -1,0 +1,19 @@
+<template name="home">
+
+    <div class="row home">
+        <img src="/img/background.jpg" class="backgroundImg">
+
+        <div class="main">
+                    <h1 class="heading">Are you searching for diet and food ideas ?</h1>
+                    <p class="title">Discover a crowdsourced meal service offering new recipes and best-favorites you can share. <br>Search by ingredients(brand), calorie count, prep-time and more ! </p>
+                    <br><br>
+                    <a class="btn btn-info btn-lg checkRecipe" href="/recipes">See  Recipes</a>
+            {{#if currentUser}}
+                    <a class="btn btn-warning btn-lg shareRecipe">Add Recipes</a>
+            {{else}}
+            <a class="btn btn-warning btn-lg shareRecipe">Login / Register</a>
+               {{/if}}
+                </div>
+    </div>
+
+</template>

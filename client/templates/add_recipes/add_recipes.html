@@ -1,0 +1,22 @@
+<template name="add_recipes">
+    <div class="container">
+        {{#autoForm collection="Recipes" id="insertRecipes" type="insert"}}
+            <fieldset>
+                <legend>Add a Recipe</legend>
+                {{> afQuickField name='name' placeholder='Recipe name' }}
+                 {{> afQuickField name='allergies' placeholder='Allergy Warning - may contain' }}
+                {{> afQuickField name='ingredients' }}
+                {{> afQuickField name='description' placeholder='Instructions to prepare meal prepare recipe.' rows=6}}
+                {{> afQuickField name='time'   placeholder='Time Required for cooking. (Only in numbers)'}}
+                 {{> afQuickField name='calories' }}
+                {{> afQuickField name="image" }}
+                {{> afQuickField name="likes" value="0" type="hidden" }}
+                {{> afQuickField name='ownerId' type="hidden" value=currentUserId}}
+                {{> afQuickField name='ownerName' type="hidden" value=currentUserName}}
+                {{> afQuickField name='voters' type="hidden" value=""}}
+
+            </fieldset>
+            <button type="submit" class="btn btn-primary btn-lg mb">Add Recipe</button>
+        {{/autoForm}}
+    </div>
+</template>

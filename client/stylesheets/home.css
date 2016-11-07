@@ -1,0 +1,65 @@
+html,body{
+    margin:  0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.backgroundImg{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+   color: black;
+    height: 120%;
+    width: 100%;
+}
+
+
+.heading {
+    color: #f8fffd;
+    font-size: 70px;
+
+
+}
+.main{
+    position: relative;
+    margin-top: 260px;
+    text-align: center;
+    margin-left: 150px;
+}
+.home{
+    padding: 0;
+    margin-top: -20px;
+    position: relative;
+    display: block;
+}
+.login_user{
+    color: white;
+    line-height: 40px;
+    font-size: 1.1em;
+}
+.title{
+    color: #fff;
+    font-size: 26px;
+    
+}
+
+.shareRecipe:hover{
+    background-color: transparent;
+    border-color: #C0D23E;
+    
+}
+.checkRecipe{
+    background-color: transparent;
+    border: 2px solid #C0D23E ;
+    margin-right: 2em;
+}
+.checkRecipe:hover{
+    background-color: #E5F04C;
+}
+
+/*-----------------------------------------------*/
